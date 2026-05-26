@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Grader 3000</title>
+    <link rel="stylesheet" href="stylesheet.css">
+</head>
+<body> <!-- contenteditable="true" -->
+<main class="grader300">
+    <header class="title">
+        <h1>Introduction to JavaScript (ISC) Grade System 2026 </h1>
+        <h2>Student : Laila</h2>
+    </header>
+
+    <section class="layout">
+        <div id="homework" class="homw">
+            <div id="homework-list"></div>
+        </div>
+
+        <div class="right-side">
+            <section class="top-tables">
+                <div id="exam" class="exm">
+                    <div id="exam-input"></div>
+                </div>
+
+                <div id="attendance" class="atdnc">
+                    <div id="attendance-input"></div>
+                </div>
+            </section>
+
+            <section id="final-grade" class="f-grd">
+                <h3>Final Grade :</h3>
+                <div id="final-grade-input"></div>
+            </section>
+
+            <section id="notes" class="notes">
+                <label for="student-notes">Notes :</label>
+                <textarea id="student-notes" placeholder="* give comments about grading *"></textarea>
+            </section>
+        </div>
+    </section>
+
+    <section id="info" class="info">
+        <div class="rules-text">
+            [i] * Attendance must be >= 80% to pass<br>
+            [i] * Each exercise can have a maximum of 100 points.<br>
+            The worst exercise result is ignored, the maximum achievable score is:<br>
+            (numberOfExercises - 1) * 100<br>
+            Passing : more than 50%, 75% of all exercises must be passed (= at least 51 points)<br>
+            so that the overall grade can still be positive.
+        </div>
+        <div>
+            Percentage%<br>
+            0 - 50 %<br>
+            up to 61 %<br>
+            up to 74 %<br>
+            up to 86 %<br>
+            up to 100 %
+        </div>
+        <div>
+            Grade<br>
+            Fail<br>
+            Sufficient<br>
+            Satisfactory<br>
+            Good<br>
+            Very Good
+        </div>
+    </section>
+</main>
+
+
+<script type="module" src="controller.js"></script>
+
+</body>
+</html>
+<!-- useless website -->
