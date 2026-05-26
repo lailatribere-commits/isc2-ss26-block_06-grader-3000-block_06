@@ -1,7 +1,6 @@
 /* TODO:
     Prepare storage for all grades and attendance.
     An array for the eight exercise grades.
-
  */
 "use strict";
 
