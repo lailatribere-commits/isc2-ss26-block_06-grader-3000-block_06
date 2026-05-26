@@ -54,7 +54,7 @@ const CONTROLLER = {
 
         const CLAMP = (val) => Math.min(100, Math.max(0, parseInt(val) || 0));
 
-        // listenener for homework
+        // listenener for homeworkk
         VIEW.hwList.addEventListener("input", (e) => {
             if (e.target.classList.contains("hw-input")) {
                 const POINTS = CLAMP(e.target.value);
