@@ -43,9 +43,50 @@ Prepare HTML and JS (MVC) files (including import/export).
     Make sure the controller reacts when the overall grades in the model change and communicates this to the view accordingly.
     (Hint: Custom Event)
  */
+"use strict";
 
+import { MODEL } from "./model.js";
+import { VIEW } from "./view.js";
 
+const CONTROLLER = {
+    init() {
+        VIEW.init();
 
+        const CLAMP = (val) => Math.min(100, Math.max(0, parseInt(val) || 0));
+
+        // listenener for homework
+        VIEW.hwList.addEventListener("input", (e) => {
+            if (e.target.classList.contains("hw-input")) {
+                const POINTS = CLAMP(e.target.value);
+                e.target.value = POINTS; // visual update
+                const INDEX = e.target.closest(".hw-row").dataset.index;
+                MODEL.gradeHomework(INDEX, POINTS);
+            }
+        });
+
+        // exam attn listeners
+        document.addEventListener("input", (e) => {
+            if (e.target.id === "exam-val") {
+                const P = CLAMP(e.target.value);
+                e.target.value = P;
+                MODEL.gradeExam(P);
+            } else if (e.target.id === "attn-val") {
+                const P = CLAMP(e.target.value);
+                e.target.value = P;
+                MODEL.gradeAttendance(P);
+            }
+        });
+
+        // custom event listener
+        document.addEventListener("modelUpdate", () => {
+            VIEW.render(MODEL);
+        });
+
+        VIEW.render(MODEL);
+    }
+};
+
+CONTROLLER.init();
 
 
 
