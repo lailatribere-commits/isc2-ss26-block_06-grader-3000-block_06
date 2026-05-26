@@ -43,7 +43,6 @@ Prepare HTML and JS (MVC) files (including import/export).
     Make sure the controller reacts when the overall grades in the model change and communicates this to the view accordingly.
     (Hint: Custom Event)
  */
-"use strict";
 
 import { MODEL } from "./model.js";
 import { VIEW } from "./view.js";
@@ -54,7 +53,6 @@ const CONTROLLER = {
 
         const CLAMP = (val) => Math.min(100, Math.max(0, parseInt(val) || 0));
 
-        // listenener for homework
         VIEW.hwList.addEventListener("input", (e) => {
             if (e.target.classList.contains("hw-input")) {
                 const POINTS = CLAMP(e.target.value);
