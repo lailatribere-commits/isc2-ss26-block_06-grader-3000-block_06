@@ -7,7 +7,7 @@
     Write a method that allows the controller to enter attendance.
     Write a method that checks whether a score is positive.
     Write a method to calculate the total exercise grade.
-    Write a method to calculate the final grade.
+    Write a method to calculate the final grade...
  */
 "use strict";
 
