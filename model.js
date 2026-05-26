@@ -1,13 +1,7 @@
 /* TODO:
     Prepare storage for all grades and attendance.
     An array for the eight exercise grades.
-    One exam grade
-    Write a method that allows the controller to grade exercises with points.
-    Write a method that allows the controller to grade the exam with points.
-    Write a method that allows the controller to enter attendance.
-    Write a method that checks whether a score is positive.
-    Write a method to calculate the total exercise grade.
-    Write a method to calculate the final grade.
+
  */
 "use strict";
 
